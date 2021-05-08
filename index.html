@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Softy Pinko</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            outline: none;
+            box-sizing: border-box;
+        }
+        main {
+            float: left;
+        }
+        #slider {
+            width: 100%;
+            background-image: url(images/banner-bg.png);
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            float: left;
+            
+        }
+        .container {
+            max-width: 835px;
+            margin: 0 auto;
+            clear: both;
+            text-align: center;
+        }
+        .navbar {
+            width: 100%;
+            border-radius: 31px;
+            background-color: white;
+            float: left;
+            padding: 10px 10px;
+            margin-top: 20px;
+            margin-bottom: 60px;
+
+        }
+        .navbar figure {
+            float: left;
+            margin-right: 65px;
+        }
+        .navbar ul {
+            list-style: none;
+            float: right;
+            padding-top: 10px;
+            font-size: 12px;
+            font-weight: 400;
+        }
+        .navbar ul li {
+            float: left;
+            margin-right: 30px;
+        }
+        
+        .navbar ul li img {
+            padding-right: 65px;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: black;
+            
+        }
+        .text {
+            width: 100%;
+            text-align: center;
+            margin: 0 auto;
+            color: white;
+
+        }
+        .text h1 {
+            font-size: 34px;
+            font-weight: normal;
+            
+        }
+        .text h1 span {
+            font-weight: bold;
+        }
+        .text p {
+            font-size: 16px;
+            padding: 48px 0;
+            width: 440px;
+            margin: 0 auto;
+        }
+        .text a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            background-color: #ff589e;
+            border-radius: 31px;
+            padding: 10px;
+            
+        }
+        
+        .option {
+            float: left;
+            margin: 5px;
+            width: 265px;
+            background-color: #fff;
+            border-radius: 21px;
+            text-align: center;
+            margin-top: 10px;
+            box-shadow: 2px 2px rgb(187, 187, 224);
+        }
+        .option figure {
+            margin: 10px auto;
+            height: 68px;
+            width: 68px;
+            border-radius: 50%;
+            background-color: royalblue;
+        }
+        .option figure img {
+            height: 50px;
+            width: 50px;
+            padding-top: 5px;
+        }
+        .option h4 {
+            margin: 25px auto;
+            
+        }
+        .option p {
+            
+            color: #aaa4a3;
+            margin: 15px;
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        #about {
+            width: 100%;
+            float: left;
+            margin: 65px 0;
+        }
+        .about_full {
+            margin-top: 150px;
+            width: 100%;
+        }
+        .container_about{
+            width: 835px;
+            margin: 0 auto;
+            clear: both;
+            text-align: left;
+        }
+        .about_cont {
+            width: 100%;
+            float: left;
+        }
+        .about_cont-2 {
+            width: 100%;
+            float: left;
+        }
+        .about_cont figure {
+            float: left;
+            width: 50%;
+        }
+        .about_cont-2 figure {
+            float: right;
+            width: 50%;
+            margin-right: -115px;
+        }
+        .about_cont figure img {
+            width: 200px;
+        }
+        .about_cont-2 figure img {
+            width: 200px;
+        }
+        
+        .about_text {
+            float: right;
+            width: 50%;
+            margin-top: 65px;
+        }
+        .about_text-2 {
+            float: left;
+            width: 50%;
+            margin-top: 65px;
+        }
+        .about_text h4 {
+            font-size: 24px ;
+            font-weight: 800;
+            
+        }
+        .about_text-2 h4 {
+            font-size: 24px ;
+            font-weight: 800;
+            
+        }
+        .about_text p {
+            font-size: 18px ;
+            font-weight: 400;
+            margin-right: 30px;
+            padding-top: 20px;
+        }
+        .about_text-2 p {
+            font-size: 18px ;
+            font-weight: 400;
+            margin-right: 30px;
+            padding-top: 20px;
+        }
+        .raw {
+            border: 1px solid #eeeeee;
+            float: left;
+            width: 100%;
+            margin: 50px 0;
+        }
+        #work-process {
+            width: 100%;
+            float: left;
+            background-image: url(images/work-process-bg.png);
+        }
+        .container-3 {
+            max-width: 836px;
+            margin: 20px auto;
+            clear: both;
+            text-align: center;
+        }
+        .text-3 {
+            width: 395px;
+            margin: 20px auto;
+            margin-top: 60px;
+            color: #fff;
+            
+        }
+        
+        .text-3 h4 {
+            font-size: 32px;
+            font-weight: 400;
+            margin-top: 20px;
+            padding-bottom: 20px;
+        }
+        .work-option {
+            margin-top: 20px;
+            width: 100%;
+            float: left;
+            margin-bottom: 60px;
+        }
+        .work-contant {
+            width: 122px;
+            float: left;
+            margin: 0 8.5px;
+            border-radius: 21px;
+            background-color: white;
+            box-shadow: 2px 3px gray;
+            
+        }
+        .work-contant figure {
+            padding-top: 20px;
+            
+        }
+        .work-contant h5 {
+            padding: 10px 0;
+            
+        }
+        .work-contant p {
+            font-weight: 400;
+            padding: 10px 0;
+            color: #a3a3a3;
+        }
+        #testimonials {
+            width: 100%;
+            float: left;
+            background-color: white;
+        }
+        .container-4 {
+            max-width: 836px;
+            padding-bottom: 290px;
+            margin: 80px auto;
+            clear: both;
+            text-align: center;     
+        }
+        .text-4 {
+            color: #000;
+            margin: 0 auto;
+        }
+        .text-4 h4 {
+            font-size: 28px;
+            font-weight: 400;
+            padding-bottom: 20px;
+        }
+        .text-4 p {
+
+            width: 400px;
+            font-size: 18px ;
+            font-weight: 400;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .testimonial-contant {
+            width: 265px;
+            height: 230px;
+            float: left;
+            margin: 40px 6.5px;
+            box-shadow: 2px 2px 2px 2px gray;
+        }
+        .testimonial-contant figure {
+            padding: 10px;
+        }
+        .testimonial-contant div{
+            width: 100%;
+            height: 75px;
+            float: left; 
+            margin-top: 33px;
+        }
+        .testimonial-contant div figure{
+            float: left;
+            width: 81px;
+        }
+        .testimonial-contant div h5 
+        {
+            text-align: left;
+            margin-top: 10px;
+        }
+        .testimonial-contant div cite
+        {
+            text-align: left;
+            display: block;
+        }
+        #pricing {
+            width: 100%;
+            float: left;
+            background-color: #f1f3ff;
+        }
+        .container-5 {
+            max-width: 836px;
+            padding-bottom: 290px;
+            margin: 80px auto;
+            clear: both;
+            text-align: center;
+        }
+        .pricing-text {
+            color: #000;
+            margin: 0 auto;
+        }
+        .pricing-text h4 {
+            font-size: 28px;
+            font-weight: 400;
+            padding-bottom: 20px;
+        }
+        .pricing-text p {
+
+            width: 400px;
+            font-size: 12px ;
+            font-weight: 400;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .pricing-contant {
+            width: 265px;
+            float: left;
+            margin: 40px 6.5px;
+            background-color: #fff;
+            border-radius: 21px;
+            padding-bottom: 30px;
+        }
+        .pricing-contant h4 {
+            margin: 20px;
+            font-size: 24px;
+        }
+        .pricing-contant div {
+            background-color: #8362ef;
+            border-radius: 21px;
+            display: inline-block;
+            width: 210px;
+        }
+        .pricing-contant div h5 {
+            font-weight: 600;
+            font-size: 28px;
+            color: white;
+            padding: 10px 0;
+        }
+        .pricing-contant div h5 span {
+            font-weight: 400;
+            font-size: 18px;
+        }
+        .pricing-contant ul {
+            color: #9d9d9d;
+            margin: 20px 0;
+        }
+        .pricing-contant ul ol {
+            margin: 10px 0;
+        }
+        .pricing-contant div h6 {
+            display: inline-block;
+            font-size: 18px;
+            color: white;
+            padding: 10px 0;
+        }
+        
+        #count {
+            width: 100%;
+            float: left;
+            height: 254px;
+            background-image: url(images/fun-facts-bg.png);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .container-6 {
+            width: 698px;
+            margin: 98px auto;
+            
+        }
+        .container-6 div {
+            float: left;
+            display: block;
+            margin: 0 20px;
+            text-align: center;
+        }
+        .container-6 h4 {
+            color: white;
+            font-size: 28px;
+        }
+        .container-6 p {
+            color: white;
+            font-size: 18px;
+        }
+        .container-6 figure {
+            float: left;
+            display: block;
+            margin-left: 9px;
+            margin-top: 18px;
+            margin-right: 5px;
+        }
+        #blog {
+            width: 100%;
+            background-color: white;
+            float: left;
+        }
+        .container-blog {
+            width: 836px;
+            margin: 20px auto;
+            clear: both;
+            height: 100%;
+            text-align: center;
+        }
+        .blog-contant {
+            width: 265px;
+            float: left;
+            margin: 40px 5px;
+        }
+        .text-4 {
+            margin: 10px 0;
+        }
+        .text-4 p {
+            margin: 20px ​auto;
+        }
+        .blog-contant h5 {
+            padding: 20px;
+        }
+        .blog-contant p {
+            padding-bottom: 30px;
+
+        }
+        .blog-contant a {
+            text-decoration: none;
+            border-radius: 21px;
+            background-color: royalblue;
+            display: inline;
+            color: white;
+            padding: 5px;
+        }
+        #contact {
+            width: 100%;
+            background-color: #f1f3ff;
+            
+            float: left;
+        }
+        .touch {
+            margin:10px 5px 10px 0;
+            width: 264px;
+            float: left;
+            height: 200px;
+            text-align: left;
+        }
+        .touch h4 {
+            margin-bottom: 20px;
+        }
+        .touch p {
+            margin-bottom: 20px;
+        }
+        .form {
+            margin:10px 0 ;
+            width: 565px;
+            float: left;
+            height: 200px;
+        }
+        #fname {
+            height: 40px;
+            width: 275px;
+            border-radius: 11px;
+            float: left;
+        }
+        #fmail {
+            margin-left: 10px;
+            height: 40px;
+            width: 275px;
+            border-radius: 11px;
+            float: left;
+        }
+        #fmessage {
+            margin-top: 10px;
+            height: 105px;
+            width: 560px;
+            border-radius: 11px;
+            float: left;
+        }
+        #submit {
+            float: left;
+            margin-top: 10px;
+            background-color: blue;
+            color: white;
+            border-radius: 11px;
+            width: 100px;
+            height: 30px;
+        }
+        #footer {
+            float: left;
+            width: 100%;
+            height: 140px;
+            background-color: #a35cd6;
+        }
+        .container-8 {
+            width: 836px;
+            margin: 30px auto;
+            text-align: center;
+        }
+        .container-8 ul li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+        .container-8 hr {
+            margin: 10px 0;
+        }
+        cite {
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <section id="slider">
+            <div class="container">
+                <div class="navbar" >
+                    <figure> 
+                        <img src="images/logo.png" alt="">
+                    </figure>
+                    <ul>
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                        <li>
+                            <a href="#">Work Process</a>
+                        </li>
+                        <li>
+                            <a href="#">Testimonials</a>
+                        </li>
+                        <li>
+                            <a href="#">Pricing Table</a>
+                        </li>
+                        <li>
+                            <a href="#">Blog Entries</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact US</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="text">
+                    <h1>We provide the best <span>strategy</span></h1>
+                    <h1>to grow up your <span>business</span></h1>
+                    <p>Softy Pinko is a professional Bootstrap 4.0 theme designed by Template Mo for your company at absolutely free of charge</p>
+
+                    <a href="#">DISCOVER MORE</a>
+                </div>
+                <div class="about_full">
+                    <div class="option"> 
+                        <figure>
+                            <img src="images/featured-item-01.png" alt="">
+                        </figure>
+                        <h4>Modern Strategy</h4>
+                        <p>Customize anything in this template to fit your website needs</p>
+                    </div>
+                    <div class="option"> 
+                            <figure>
+                                <img src="images/featured-item-01.png" alt="">
+                            </figure>
+                            <h4>Modern Strategy</h4>
+                        <p>Customize anything in this template to fit your website needs</p>
+                    </div>
+                    <div class="option"> 
+                        <figure>
+                            <img src="images/featured-item-01.png" alt="">
+                        </figure>
+                        <h4>Modern Strategy</h4>
+                        <p>Customize anything in this template to fit your website needs</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="about">
+            <div class="container_about">
+                <div class="about_cont">
+                    <figure>
+                        <img src="images/left-image.png" alt="">
+                    </figure>
+                    <div class="about_text">
+                        <h4>Let’s discuss about you project</h4>
+                        <p>Nullam sit amet purus libero. Etiam ullamcorper nisl ut augue blandit, at finibus leo efficitur. Nam gravida purus non sapien auctor, ut aliquam magna ullamcorper.</p>
+                    </div>
+                </div>
+                <div class="raw"></div>
+                <div class="about_cont-2">
+                    <div class="about_text-2">
+                        <h4>We can help you to grow your business</h4>
+                        <p>Nullam sit amet purus libero. Etiam ullamcorper nisl ut augue blandit, at finibus leo efficitur. Nam gravida purus non sapien auctor, ut aliquam magna ullamcorper.</p>
+                    </div>
+                    <figure>
+                        <img src="images/right-image.png" alt="">
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <section id="work-process">
+            <div class="container-3">
+                <div class="text-3">
+                    <h4>Work Process</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse cum totam debitis fuga adipisci aliquam praesentium </p>
+                </div>
+                <div class="work-option">
+                    <div class="work-contant">
+                        <figure>
+                            <img src="images/work-process-item-01.png" height="25px"
+                            width="25px">
+                        </figure>
+                        <h5>Get Ideas</h5>
+                        <p>Lorem ipsum dolor sit .</p>
+                    </div>
+                    <div class="work-contant">
+                        <figure>
+                            <img src="images/work-process-item-01.png" height="25px"
+                            width="25px">
+                        </figure>
+                        <h5>Get Ideas</h5>
+                        <p>Lorem ipsum dolor sit .</p>
+                    </div>
+                    <div class="work-contant">
+                        <figure>
+                            <img src="images/work-process-item-01.png" height="25px"
+                            width="25px">
+                        </figure>
+                        <h5>Get Ideas</h5>
+                        <p>Lorem ipsum dolor sit .</p>
+                    </div>
+                    <div class="work-contant">
+                        <figure>
+                            <img src="images/work-process-item-01.png" height="25px"
+                            width="25px">
+                        </figure>
+                        <h5>Get Ideas</h5>
+                        <p>Lorem ipsum dolor sit .</p>
+                    </div>
+                    <div class="work-contant">
+                        <figure>
+                            <img src="images/work-process-item-01.png" height="25px"
+                            width="25px">
+                        </figure>
+                        <h5>Get Ideas</h5>
+                        <p>Lorem ipsum dolor sit .</p>
+                    </div>
+                    <div class="work-contant">
+                        <figure>
+                            <img src="images/work-process-item-01.png" height="25px"
+                            width="25px">
+                        </figure>
+                        <h5>Get Ideas</h5>
+                        <p>Lorem ipsum dolor sit .</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="testimonials">
+            <div class="container-4">
+                <div class="text-4">
+                    <h4>What do they say ?
+                    </h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse cum totam debitis fuga adipisci </p>
+                </div>
+                <div class="testimonial-contant">
+                    <figure>
+                        <img src="images/testimonial-icon.png" height="25px"
+                        width="25px">
+                    </figure>
+                    <p>Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit  .</p>
+                    <div>
+                        <figure>
+                            <img src="images/opt.png" alt="">
+                        </figure>
+                        <h5>Catherina Soft</h5>
+                        <cite>Managing Director</cite>
+                    </div>
+                </div>
+                <div class="testimonial-contant">
+                    <figure>
+                        <img src="images/testimonial-icon.png" height="25px"
+                        width="25px">
+                    </figure>
+                    <p>Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit  .</p>
+                    <div>
+                        <figure>
+                            <img src="images/opt.png" alt="">
+                        </figure>
+                        <h5>Catherina Soft</h5>
+                        <cite>Managing Director</cite>
+                    </div>
+                </div>
+                <div class="testimonial-contant">
+                    <figure>
+                        <img src="images/testimonial-icon.png" height="25px"
+                        width="25px">
+                    </figure>
+                    <p>Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit  .</p>
+                    <div>
+                        <figure>
+                            <img src="images/opt.png" alt="">
+                        </figure>
+                        <h5>Catherina Soft</h5>
+                        <cite>Managing Director</cite>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id = "pricing">
+            <div class="container-5">
+                <div class="pricing-text">
+                    <h4>Pricing Plans</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex autem, repellendus nam aspernatur modi </p>
+                </div>
+                <div class="pricing-contant">
+                    <h4>Starter</h4>
+                    <div>
+                        <h5>$14.50 <br> <span>monthly</span></h5>
+                    </div>
+                    <ul>
+                        <ol>60 GB Space</ol>
+                        <ol>600 GB Transfer</ol>
+                        <ol>Pre Design Panel</ol>
+                        <ol><del>15 minute support</del></ol>
+                        <ol><del>Unlimited Emails</del></ol>
+                        <ol><del>24/7 Securities</del></ol>
+                    </ul>
+                    <div>
+                        <h6>PURCHASE NOW</h6>
+                    </div>
+                </div>
+
+                <div class="pricing-contant">
+                    <h4>Premium</h4>
+                    <div style="background-color: #ff589e;">
+                        <h5>$21.50 <br> <span>monthly</span></h5>
+                    </div>
+                    <ul>
+                        <ol>60 GB Space</ol>
+                        <ol>600 GB Transfer</ol>
+                        <ol>Pre Design Panel</ol>
+                        <ol>15 minute support</ol>
+                        <ol><del>Unlimited Emails</del></ol>
+                        <ol><del>24/7 Securities</del></ol>
+                    </ul>
+                    <div>
+                        <h6>PURCHASE NOW</h6>
+                    </div>
+                </div>
+
+                <div class="pricing-contant">
+                    <h4>Advanced</h4>
+                    <div>
+                        <h5>$14.50 <br> <span>monthly</span></h5>
+                    </div>
+                    <ul>
+                        <ol>60 GB Space</ol>
+                        <ol>600 GB Transfer</ol>
+                        <ol>Pre Design Panel</ol>
+                        <ol>15 minute support</ol>
+                        <ol>Unlimited Emails</ol>
+                        <ol>24/7 Securities</ol>
+                    </ul>
+                    <div>
+                        <h6>PURCHASE NOW</h6>
+                    </div>
+                </div>
+                
+                
+                
+            </div>
+        </section>
+        <section id="count">
+            <div class="container-6">
+                <div>
+                    <h4>16</h4>
+                    <p>projects</p>
+                </div>
+                <figure style="float: left;">
+                    <img src="images/circle-dec.png" alt="">
+                </figure>
+                <div>
+                    <h4>8</h4>
+                    <p>Happy Clients</p>
+                </div>
+                <figure style="float: left;">
+                    <img src="images/circle-dec.png" alt="">
+                </figure>
+                <div>
+                    <h4>2</h4>
+                    <p>Award Wins</p>
+                </div>
+                <figure style="float: left;">
+                    <img src="images/circle-dec.png" alt="">
+                </figure>
+                <div>
+                    <h4>3</h4>
+                    <p>Countries</p>
+                </div>
+                
+            </div>
+        </section>
+        <section id="blog">
+            <div class="container-blog">
+                <div class="text-4">
+                    <h4>Blog Entries
+                    </h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse cum totam debitis fuga adipisci </p>
+                </div>
+                <div class="blog-contant">
+                    <figure>
+                        <img src="images/blog-item-01.png" height="154px"
+                        width="265px">
+                    </figure>
+                    <h5>Catherina Soft</h5>
+                    <p>Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum .</p>
+                    <a href="#"> Read More</a>
+                </div>
+                
+                <div class="blog-contant">
+                    <figure>
+                        <img src="images/blog-item-02.png" height="154px"
+                        width="265px">
+                    </figure>
+                    <h5>Catherina Soft</h5>
+                    <p>Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum .</p>
+                    <a href="#"> Read More</a>
+                </div>
+                <div class="blog-contant">
+                    <figure>
+                        <img src="images/blog-item-03.png" height="154px"
+                        width="265px">
+                    </figure>
+                    <h5>Catherina Soft</h5>
+                    <p>Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum .</p>
+                    <a href="#"> Read More</a>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="container-4">
+                <div class="text-4">
+                    <h4>Talk to us
+                    </h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse cum totam debitis fuga adipisci </p>
+                </div>
+                <div class="touch">
+                    <h4>Keep in touch</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. adipisicing elit.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. adipisicing elit.</p>
+                </div>
+                <div class="form">
+                    <form action="/action_page.php">
+                        <input type="text" id="fname" placeholder="Full Name">
+                        <input type="text" id="fmail" placeholder="Email Address">
+                        <br>
+                        <input type="text" id="fmessage"  placeholder="Your Message">
+                        <input type="submit" id="submit" value="Send Message">
+                      </form> 
+                </div>
+            </div> 
+        </section>
+        <section id="footer">
+            <div class="container-8">
+                <ul>
+                    <li><a href=""><img src="images/fb.png" alt=""></a></li>
+                    <li><a href=""><img src="images/twit.png" alt=""></a></li>
+                    <li><a href=""><img src="images/in.png" alt=""></a></li>
+                    <li><a href=""><img src="images/wifi.png" alt=""></a></li>
+                    <li><a href=""><img src="images/round.png" alt=""></a></li>
+                </ul>
+                <hr>
+                <cite>COPYRIGHT &copy; 2020 SOFTY PINKO COMPANY - DESIGN: THEAMPLATEMO </cite>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
